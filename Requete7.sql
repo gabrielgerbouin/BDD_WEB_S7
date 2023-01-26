@@ -1,5 +1,4 @@
 -- gerbouga
--- testee, validee
 -- Premiere requete, pour selectionner le nom et prenom de chaque evaluateur, et la moyenne qu'il a donné pour tous les concours
 INSERT INTO TempTableRequete7
 SELECT Utilisateur.nom, Utilisateur.prenom, AVG(Evaluation.note) AS moyenne, Concours.numConcours

@@ -1,5 +1,4 @@
 -- gerbouga
--- testee, validee
 SELECT Evaluation.numDessin, Evaluation.note, Utilisateur.nom, Concours.descriptif, Concours.theme
 FROM Evaluation, Utilisateur, Concours, Dessin, Competiteur
 WHERE Evaluation.numDessin = Dessin.numDessin -- On lie la table Evaluation a la table Dessin

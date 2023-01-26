@@ -1,5 +1,4 @@
 -- pommergu
--- testee, validee
 SELECT Utilisateur.nom, Utilisateur.adresse, Utilisateur.age, Concours.descriptif, Concours.datedeb, Concours.datefin, Club.nomClub as "Club", Club.departement, Club.region 
 FROM Utilisateur, Concours, Club, Competiteur, ParticipeCompetiteur, ParticipeClub 
 Where Utilisateur.numUtilisateur = Competiteur.numCompetiteur  

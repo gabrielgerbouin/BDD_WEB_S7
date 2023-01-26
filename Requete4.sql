@@ -1,5 +1,4 @@
 -- gerbouga
--- testee, validee
 SELECT Utilisateur.nom, Utilisateur.prenom, Utilisateur.age 
 FROM Utilisateur, Competiteur, ParticipeCompetiteur, Concours 
 WHERE Utilisateur.numUtilisateur = Competiteur.numCompetiteur -- On lie la table Utilistaue à la table Comptiteur 

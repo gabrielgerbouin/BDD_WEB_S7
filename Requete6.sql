@@ -1,5 +1,4 @@
 -- gerbouga
--- testee, validee
 SELECT Utilisateur.nom, Utilisateur.prenom, COUNT(Evaluation.note) AS nombreDeNotes, Concours.numConcours
 FROM Utilisateur, Evaluation, Concours, Dessin, Evaluateur
 WHERE Evaluation.numDessin = Dessin.numDessin -- On lie la table Evaluation et la table Dessin
