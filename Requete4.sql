@@ -1,5 +1,5 @@
 -- gerbouga
--- pas d erreur de code mais impossible de verifier car aucun competiteur n a participe a tous les concours
+-- testee, validee
 SELECT Utilisateur.nom, Utilisateur.prenom, Utilisateur.age 
 FROM Utilisateur, Competiteur, ParticipeCompetiteur, Concours 
 WHERE Utilisateur.numUtilisateur = Competiteur.numCompetiteur -- On lie la table Utilistaue à la table Comptiteur 
