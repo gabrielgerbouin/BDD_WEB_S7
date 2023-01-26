@@ -1,5 +1,5 @@
 -- gerbouga
--- Testee, a verifier ensemble
+-- Testee, validee
 SELECT Club.region, AVG(Evaluation.note) as moyenne 
 FROM Club, Evaluation, Utilisateur, Competiteur, Dessin 
 WHERE Club.numClub = Utilisateur.numClub -- On lie la table Club à la table Utilisateur 
