@@ -1,12 +1,10 @@
--- pommergu
--- testee, a verifier ensemble
-SELECT Dessin.numDessin, Evaluation.note, Utilisateur.nom, Concours.descriptif, Concours.theme 
-FROM Dessin, Evaluation, Utilisateur, Concours, Competiteur, ParticipeCompetiteur 
-Where Utilisateur.numUtilisateur = Competiteur.numCompetiteur -- On selection le competiteur 
-AND Competiteur.numCompetiteur = ParticipeCompetiteur.numCompetiteur -- On s assure que l on parle bien du même utilisateur 
-AND ParticipeCompetiteur.numConcours = Concours.numConcours          -- On s assure qu'on sélectionne un concours de ce même utilisateur 
-AND Dessin.numCompetiteur = Competiteur.numCompetiteur    -- On sélectionne le dessin du compétiteur  
-AND Dessin.numDessin = Evaluation.numDessin  -- on sélectionne l évaluation correspondante au dessin 
--- Fin de la sélection, début des conditions 
-AND YEAR(Evaluation.dateEvaluation) = 2022 -- YEAR(une_date) permet de retourner lannée uniquement  
-ORDER BY  Evaluation.note ASC -- Tri dans l'ordre ascendant des notes
+-- gerbouga
+-- testee, validee
+SELECT Evaluation.numDessin, Evaluation.note, Utilisateur.nom, Concours.descriptif, Concours.theme
+FROM Evaluation, Utilisateur, Concours, Dessin, Competiteur
+WHERE Evaluation.numDessin = Dessin.numDessin -- On lie la table Evaluation a la table Dessin
+AND Dessin.numConcours = Concours.numConcours -- On lie la table Dessin a la table Concours
+AND Dessin.numCompetiteur = Competiteur.numCompetiteur -- On lie la table Dessin a la table Competiteur
+AND Competiteur.numCompetiteur = Utilisateur.numUtilisateur -- On lie la table Competiteur a la table Evaluateur
+AND YEAR(Dessin.dateRemise) = 2022  -- YEAR(une_date) permet de retourner lannée uniquement
+ORDER BY Evaluation.note ASC; -- Tri dans l'ordre ascendant des notes
