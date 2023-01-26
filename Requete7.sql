@@ -1,5 +1,6 @@
 -- gerbouga
 -- En Cours
+INSERT INTO TempTableRequete7
 SELECT Utilisateur.nom, Utilisateur.prenom, AVG(Evaluation.note) AS moyenne, Concours.numConcours
 FROM Utilisateur, Evaluation, Concours, Dessin, Evaluateur
 WHERE Evaluation.numDessin = Dessin.numDessin
