@@ -180,7 +180,8 @@ INSERT INTO Utilisateur(numClub, numUtilisateur, nom, prenom, age, adresse, iden
 INSERT INTO Utilisateur(numClub, numUtilisateur, nom, prenom, age, adresse, identifiant, motdepasse, dateAdhesion ) VALUES (3403, 159, 'Mesny', 'Maéva', 77, '46, Impasse des Merles, 97100 Basse-Terre', 'Maéva.Mesny', 'LoOxUr81', '2001-11-25');
 INSERT INTO Utilisateur(numClub, numUtilisateur, nom, prenom, age, adresse, identifiant, motdepasse, dateAdhesion ) VALUES (3403, 160, 'Reverdin', 'Astrid', 55, '35, Impasse des Chênes, 97100 Basse-Terre', 'Astrid.Reverdin', 'QxYtCi63', '2001-3-10');
 INSERT INTO Utilisateur(numClub, numUtilisateur, nom, prenom, age, adresse, identifiant, motdepasse, dateAdhesion ) VALUES (3403, 161, 'Alméras', 'Lydie', 77, '25, Impasse des Soyeux, 97100 Basse-Terre', 'Lydie.Alméras', 'WmJoPc69', '2002-2-28');
-
+/* Ajout de donnees pour valider la requete4 (un competiteur qui participe a chaque concours) */
+INSERT INTO Utilisateur(numClub, numUtilisateur, nom, prenom, age, adresse, identifiant, motdepasse, dateAdhesion ) VALUES (3403, 777, 'Toin', 'Rodolphe', 77, '25, Impasse des Beaux Gosses, 97100 Basse-Terre', 'Nom.TestRequete4', 'WmJoPc69', '2002-2-28');
 
 /*.......Requetes Président.........*/
 INSERT INTO President( numPresident, prime) VALUES (155, 97);
@@ -191,9 +192,6 @@ INSERT INTO President( numPresident, prime) VALUES (156, 77);
 INSERT INTO President( numPresident, prime) VALUES (3, 76);
 INSERT INTO President( numPresident, prime) VALUES (46, 59);
 INSERT INTO President( numPresident, prime) VALUES (86, 65);
-
-
-
 
 /*.......Requetes Evaluateur.........*/
 INSERT INTO Evaluateur( numEvaluateur, specialite) VALUES (3, 'Contemporain');
@@ -342,10 +340,11 @@ INSERT INTO Competiteur( numCompetiteur, datePremParticipation) VALUES (158, '20
 INSERT INTO Competiteur( numCompetiteur, datePremParticipation) VALUES (159, '2011-7-14');
 INSERT INTO Competiteur( numCompetiteur, datePremParticipation) VALUES (160, '2012-1-4');
 INSERT INTO Competiteur( numCompetiteur, datePremParticipation) VALUES (161, '2012-8-21');
+/* Ajout de donnees pour valider la requete4 (un competiteur qui participe a chaque concours) */
+INSERT INTO Competiteur( numCompetiteur, datePremParticipation) VALUES (777, '2012-8-21');
 
 /*.......Requetes Administrateur........*/
 INSERT INTO Administrateur( numAdministrateur, dateDebut) VALUES (1, '1999-10-4');
-
 
 /*.......Requetes Directeur........*/
 INSERT INTO Directeur( numDirecteur, dateDebut) VALUES (2, '2003-6-18');
@@ -1528,6 +1527,15 @@ INSERT INTO Dessin(numDessin, numCompetiteur, numConcours, commentaire, classeme
 INSERT INTO Dessin(numDessin, numCompetiteur, numConcours, commentaire, classement, dateRemise, leDessin) VALUES (1150, 161, 8, 'Commentaire du dessin 1150', 3, '2022-12-6', 'Dessin_1150.svg');
 INSERT INTO Dessin(numDessin, numCompetiteur, numConcours, commentaire, classement, dateRemise, leDessin) VALUES (1151, 161, 8, 'Commentaire du dessin 1151', 2, '2022-12-4', 'Dessin_1151.svg');
 INSERT INTO Dessin(numDessin, numCompetiteur, numConcours, commentaire, classement, dateRemise, leDessin) VALUES (1152, 161, 8, 'Commentaire du dessin 1152', 1, '2022-12-1', 'Dessin_1152.svg');
+/* Ajout de donnees pour valider la requete4 (un competiteur qui participe a chaque concours) */
+INSERT INTO Dessin(numDessin, numCompetiteur, numConcours, commentaire, classement, dateRemise, leDessin) VALUES (1153, 777, 1, 'Commentaire du dessin 1153', 1, '2021-02-1', 'Dessin_1153.svg');
+INSERT INTO Dessin(numDessin, numCompetiteur, numConcours, commentaire, classement, dateRemise, leDessin) VALUES (1154, 777, 2, 'Commentaire du dessin 1154', 1, '2021-05-1', 'Dessin_1154.svg');
+INSERT INTO Dessin(numDessin, numCompetiteur, numConcours, commentaire, classement, dateRemise, leDessin) VALUES (1155, 777, 3, 'Commentaire du dessin 1155', 1, '2021-08-1', 'Dessin_1155.svg');
+INSERT INTO Dessin(numDessin, numCompetiteur, numConcours, commentaire, classement, dateRemise, leDessin) VALUES (1156, 777, 4, 'Commentaire du dessin 1156', 1, '2021-12-1', 'Dessin_1156.svg');
+INSERT INTO Dessin(numDessin, numCompetiteur, numConcours, commentaire, classement, dateRemise, leDessin) VALUES (1157, 777, 5, 'Commentaire du dessin 1157', 1, '2022-02-1', 'Dessin_1157.svg');
+INSERT INTO Dessin(numDessin, numCompetiteur, numConcours, commentaire, classement, dateRemise, leDessin) VALUES (1158, 777, 6, 'Commentaire du dessin 1158', 1, '2022-05-1', 'Dessin_1158.svg');
+INSERT INTO Dessin(numDessin, numCompetiteur, numConcours, commentaire, classement, dateRemise, leDessin) VALUES (1159, 777, 7, 'Commentaire du dessin 1159', 1, '2022-08-1', 'Dessin_1159.svg');
+INSERT INTO Dessin(numDessin, numCompetiteur, numConcours, commentaire, classement, dateRemise, leDessin) VALUES (1160, 777, 8, 'Commentaire du dessin 1160', 1, '2022-12-1', 'Dessin_1160.svg');
 
 /*.......Requetes Dirige.......*/
 INSERT INTO Dirige(numClub, numDirecteur) VALUES (1529, 2);
@@ -4294,7 +4302,15 @@ INSERT INTO ParticipeCompetiteur(numCompetiteur, numConcours) VALUES (158, 8);
 INSERT INTO ParticipeCompetiteur(numCompetiteur, numConcours) VALUES (159, 8);
 INSERT INTO ParticipeCompetiteur(numCompetiteur, numConcours) VALUES (160, 8);
 INSERT INTO ParticipeCompetiteur(numCompetiteur, numConcours) VALUES (161, 8);
-
+/* Ajout de donnees pour valider la requete4 (un competiteur qui participe a chaque concours) */
+INSERT INTO ParticipeCompetiteur(numCompetiteur, numConcours) VALUES (777, 1);
+INSERT INTO ParticipeCompetiteur(numCompetiteur, numConcours) VALUES (777, 2);
+INSERT INTO ParticipeCompetiteur(numCompetiteur, numConcours) VALUES (777, 3);
+INSERT INTO ParticipeCompetiteur(numCompetiteur, numConcours) VALUES (777, 4);
+INSERT INTO ParticipeCompetiteur(numCompetiteur, numConcours) VALUES (777, 5);
+INSERT INTO ParticipeCompetiteur(numCompetiteur, numConcours) VALUES (777, 6);
+INSERT INTO ParticipeCompetiteur(numCompetiteur, numConcours) VALUES (777, 7);
+INSERT INTO ParticipeCompetiteur(numCompetiteur, numConcours) VALUES (777, 8);
 
 /*.......Requetes MembreJury.......*/
 INSERT INTO MembreJury(numConcours, numEvaluateur) VALUES (1, 3);
