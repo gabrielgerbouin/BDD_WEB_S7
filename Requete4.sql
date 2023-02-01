@@ -25,5 +25,5 @@ SELECT *
 FROM TempTableRequete4
 WHERE nbrConcours = 8;
 
--- Suppression de la table TempTableRequete7 en fin de requete
+-- Suppression de la table TempTableRequete4 en fin de requete
 drop table if exists TempTableRequete4;
